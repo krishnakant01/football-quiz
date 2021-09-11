@@ -76,16 +76,11 @@ var questions = [
 
 function quiz(options, question, answer) {
   var userAnswer = readlineSync.keyInSelect(options, question)
-  
   if(options[userAnswer] === answer) {
-    
-    
     log(chalk.green("\n--Right--" + "\n"));
     score = score + 2;
     log(chalk.green("Current Score : " + score));
     log("===================================================");
-    
-    
   }
   else {
     log(chalk.red("\n--Wrong--" + "\n"));
